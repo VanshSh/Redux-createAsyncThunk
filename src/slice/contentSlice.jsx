@@ -12,7 +12,7 @@ export const fetchContent = createAsyncThunk(
   // async (userId, thunkAPI)
   async () => {
     const res = await axios('https://jsonplaceholder.typicode.com/photos');
-    const data = await res.data.slice(0, 30);
+    const data = await res.data.slice(0, 60);
     return data;
   }
 );
