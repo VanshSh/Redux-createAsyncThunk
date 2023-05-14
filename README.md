@@ -42,14 +42,14 @@
     },
 
     // OR YOU CAN WRITE LIKE THIS
-    //  [getUserById.pending]: (state, action) => {
+    //  [fetchContent.pending]: (state, action) => {
     //   state.status = 'loading';
     // },
-    // [getUserById.fulfilled]: (state, action) => {
+    // [fetchContent.fulfilled]: (state, action) => {
     //   state.status = 'succeeded';
     //   state.user = action.payload;
     // },
-    // [getUserById.rejected]: (state, action) => {
+    // [fetchContent.rejected]: (state, action) => {
     //   state.status = 'failed';
     //   state.error = action.error.message;
     // }
