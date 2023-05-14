@@ -1,7 +1,9 @@
-# Redux-createAsyncThunk
+# Redux + createAsyncThunk
 
 - How to use `createAsyncThunk` to create the async reducer in Redux.
+
   - We will use the Redux toolkit provided API `createAsyncThunk` to make async reducer.
+
   ```jsx
   import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
   import axios from 'axios';
@@ -54,4 +56,19 @@
   });
 
   export default contentSlice.reducer;
+  ```
+
+- ComponentWithRedux.jsx
+
+  ```
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+  // We directly call the fetch function instead of using actions
+  dispatch(fetchContent());
+  }, [dispatch]);
+
+  const contents = useSelector((state) => state.content.contents);
+  const isLoading = useSelector((state) => state.content.isLoading);
+  const error = useSelector((state) => state.content.error);
   ```
