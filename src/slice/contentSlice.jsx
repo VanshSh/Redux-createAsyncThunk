@@ -19,7 +19,7 @@ export const fetchContent = createAsyncThunk(
 export const contentSlice = createSlice({
   name: 'content',
   initialState,
-  reducers: {},
+
   extraReducers: (builder) => {
     builder.addCase(fetchContent.pending, (state) => {
       state.isLoading = true;
